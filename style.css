@@ -80,10 +80,15 @@ label {
   color: var(--Black);
   font-weight: 700;
 }
+label:hover{
+  color: var(--Moderate-cyan);
+  transition: 600ms;
+  cursor: pointer;
+}
 .btn {
   border: none;
   background-color: var(--white);
-  padding: clamp(1.2rem, 1.4vw, 1.5rem) clamp(3rem, 4vw, 5rem);
+  padding: clamp(1.2rem, 1.4vw, 1.5rem) clamp(2rem, 4vw, 5rem);
   color: var(--white);
   font-weight: 500;
   border-radius: 5rem;
@@ -338,6 +343,7 @@ main {
 .val-pledge {
   margin-bottom: 0;
 }
+.modal-project-box .modal-pledges .pledges,
 .modal-project-box .modal-pledge .pledge {
   align-items: center;
 }
@@ -362,7 +368,6 @@ input[type="radio"] {
   border-radius: 0 0 1rem 1rem;
 }
 .btn-pledge {
-  justify-content: space-between;
   gap: 1rem;
   width: 100%;
 }
@@ -467,5 +472,32 @@ input[type="radio"] {
   }
   .pledge-box .flex:not(:last-child) {
     margin-bottom: 0;
+  }
+  .pledge-box .flex:not(.modal-project-box .pledge-box .flex){
+    justify-content: space-between;
+  }
+  .block{
+    display: inline-block;
+    margin-top: 0;
+    margin-left:2rem;
+  }
+  .modal-project-box .pledge-box{
+    position: relative;
+  }
+  .modal-pledges .pledge-box .pledges,
+  .modal-pledge .pledge-box .pledge{
+    margin-bottom: 2rem;
+  }
+  .val-pledge{
+    position: absolute;
+    top:2.5rem;
+    right: 3rem;
+  }
+  .select-pledge p{
+    margin-bottom: 0;
+  }
+  .select-pledge p,
+  .select-pledge .btn-pledge{
+    flex: 3;
   }
 }

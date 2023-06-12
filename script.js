@@ -125,6 +125,8 @@ modalPledge.forEach((pledge,i) => {
 
 
     btnContinue.addEventListener('click',()=>{
+      modalBox.classList.add('hide')
+      overlay.classList.add('hide')
       Backers.textContent = totalValueBacker;
       valBacked.textContent = totalBackend;
       pledgeVal.textContent = pledgeValue;
