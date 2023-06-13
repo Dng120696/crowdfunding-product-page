@@ -30,6 +30,7 @@ overlay.addEventListener("click", () => {
   addHide();
   modalBox.classList.add("hide");
   success.classList.add("hide");
+  document.querySelector('body').style.overflowY= 'initial'
 });
 
 window.addEventListener("keydown", (e) => {
@@ -39,6 +40,7 @@ window.addEventListener("keydown", (e) => {
     !success.classList.contains("hide")
   ) {
     addHide();
+    document.querySelector('body').style.overflowY= 'initial'
     modalBox.classList.add("hide");
     success.classList.add("hide");
   }
@@ -104,6 +106,7 @@ btnGotit.addEventListener("click", () => {
   Backers.textContent = totalValueBacker;
   valBacked.textContent = totalBackend;
   progressVal.style.width = `${(totalBackend / 100000) * 100}%`;
+  document.querySelector('body').style.overflowY= 'initial'
 });
 
 /////////////===========....////////////
@@ -126,9 +129,7 @@ modalPledge.forEach((pledge,i) => {
 
     btnContinue.addEventListener('click',()=>{
       modalBox.classList.add('hide')
-      overlay.classList.add('hide')
-      Backers.textContent = totalValueBacker;
-      valBacked.textContent = totalBackend;
+      success.classList.remove('hide')
       pledgeVal.textContent = pledgeValue;
     })
     input.checked = true;
@@ -162,6 +163,12 @@ modalPledge.forEach((pledge,i) => {
     }
   });
 });
-backProjectBtn.addEventListener("click", toggleModal);
-modalCloseMenu.addEventListener("click", toggleModal);
+backProjectBtn.addEventListener("click", ()=>{
+ toggleModal()
+  document.querySelector('body').style.overflowY= 'hidden'
+});
+modalCloseMenu.addEventListener("click", ()=>{
+  toggleModal()
+  document.querySelector('body').style.overflowY= 'initial'
+});
 

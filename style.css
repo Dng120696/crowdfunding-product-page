@@ -15,6 +15,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -27,6 +28,7 @@ html {
   list-style-type: none;
   box-sizing: inherit;
 }
+
 .flex {
   display: flex;
 }
@@ -101,6 +103,11 @@ label:hover{
 }
 .bg-lght-green {
   background-color: var(--Moderate-cyan);
+}
+.bg-lght-green a{
+  color: var(--white);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
 }
 .bg-lght-gray {
   background-color: var(--Dark-gray);
@@ -325,10 +332,23 @@ main {
   cursor: not-allowed;
 }
 /* MODAL SECTION */
-.modal-project-box,
-.success-sec {
+.modal-project-box{
+  height:65rem;
+  overflow-y: scroll;
+}
+.modal-project-box::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+/* Custom scrollbar styles */
+.modal-project-box::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+
+.modal-project-box,.success-sec {
   position: absolute;
-  top: 100rem;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
