@@ -30,7 +30,7 @@ overlay.addEventListener("click", () => {
   addHide();
   modalBox.classList.add("hide");
   success.classList.add("hide");
-  document.querySelector('body').style.overflowY= 'initial'
+  document.bodystyle.overflowY= 'initial'
 });
 
 window.addEventListener("keydown", (e) => {
@@ -40,7 +40,7 @@ window.addEventListener("keydown", (e) => {
     !success.classList.contains("hide")
   ) {
     addHide();
-    document.querySelector('body').style.overflowY= 'initial'
+    document.body.style.overflowY= 'initial'
     modalBox.classList.add("hide");
     success.classList.add("hide");
   }
@@ -165,10 +165,10 @@ modalPledge.forEach((pledge,i) => {
 });
 backProjectBtn.addEventListener("click", ()=>{
  toggleModal()
-  document.querySelector('body').style.overflowY= 'hidden'
+  document.body.style.overflowY= 'hidden'
 });
 modalCloseMenu.addEventListener("click", ()=>{
   toggleModal()
-  document.querySelector('body').style.overflowY= 'initial'
+  document.body.style.overflowY= 'initial'
 });
 
